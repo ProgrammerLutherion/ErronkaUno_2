@@ -1,6 +1,7 @@
 package com.example.erronkatest;
 
 import android.app.Activity;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
@@ -16,13 +17,16 @@ public class SpinnerThread extends Thread {
     private String DB_URL = "jdbc:postgresql://192.168.65.21/ErronkaUno";
     private String USER = "openpg";
     private String PASS = "openpgpwd";
-    private String QUERY = "SELECT res_partner.id, res_partner.name, res_partner.active  FROM res_partner";
+    private String QUERY = "SELECT res_partner.id, res_partner.name, res_partner.active FROM res_partner WHERE active = true";
     ArrayAdapter<String> adapter;
     ArrayList<Client> clients = new ArrayList<>();
     ArrayList<String> names = new ArrayList<>();
+    Spinner sc;
+    Activity mainact1;
 
     public SpinnerThread(Activity mainact){
-        adapter = new ArrayAdapter<>(mainact.getApplicationContext(), android.R.layout.simple_list_item_1, names);
+        mainact1 = mainact;
+        sc = (Spinner) mainact.findViewById(R.id.spinnerPersona);
     }
 
     public void run(){
@@ -35,6 +39,7 @@ public class SpinnerThread extends Thread {
                 while (rs.next()) {
                     // Retrieve by column name
                     Client client = new Client(rs.getInt("id"), rs.getString("name"), rs.getBoolean("active"));
+                    Log.i("TAG", "run: "+rs.getString("name"));
                     insertClient(client);
                     insertName(client);
                 }
@@ -45,8 +50,9 @@ public class SpinnerThread extends Thread {
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-        Spinner sc = (Spinner) findViewById(R.id.spinnerPersona);
-        sc.setAdapter(adapter);
+        adapter = new ArrayAdapter<>(mainact1.getApplicationContext(), android.R.layout.simple_spinner_item, names);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        MainActivity.adapterPersona = adapter;
 
     }
     public void insertName(Client client){
