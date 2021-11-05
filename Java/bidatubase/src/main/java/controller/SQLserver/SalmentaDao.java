@@ -3,9 +3,13 @@ package controller.SQLserver;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Repository;
 
 import model.SQLserver.*;
-
+@Repository
+@Transactional
 public class SalmentaDao {
 
 	private EntityManager entityManager;

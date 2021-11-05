@@ -20,7 +20,7 @@ public class Salmentak implements Serializable {
 
 	private String egoera;
 
-	private int guztira;
+	private float guztira;
 
 	private String zenbakia;
 
@@ -61,11 +61,11 @@ public class Salmentak implements Serializable {
 		this.egoera = egoera;
 	}
 
-	public int getGuztira() {
+	public float getGuztira() {
 		return this.guztira;
 	}
 
-	public void setGuztira(int guztira) {
+	public void setGuztira(float guztira) {
 		this.guztira = guztira;
 	}
 

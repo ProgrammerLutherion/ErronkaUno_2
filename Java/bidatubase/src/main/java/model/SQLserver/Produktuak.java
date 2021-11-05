@@ -17,15 +17,15 @@ public class Produktuak implements Serializable {
 	@Id
 	private int id;
 
-	private int bolumena;
+	private float bolumena;
 
 	private String deskripzioa;
 
 	private String izena;
 
-	private int pisua;
+	private float pisua;
 
-	private int prezioa;
+	private float prezioa;
 
 	//bi-directional many-to-one association to Erosketak
 	@OneToMany(mappedBy="produktuak")
@@ -42,11 +42,11 @@ public class Produktuak implements Serializable {
 		this.id = id;
 	}
 
-	public int getBolumena() {
+	public float getBolumena() {
 		return this.bolumena;
 	}
 
-	public void setBolumena(int bolumena) {
+	public void setBolumena(float bolumena) {
 		this.bolumena = bolumena;
 	}
 
@@ -66,19 +66,19 @@ public class Produktuak implements Serializable {
 		this.izena = izena;
 	}
 
-	public int getPisua() {
+	public float getPisua() {
 		return this.pisua;
 	}
 
-	public void setPisua(int pisua) {
+	public void setPisua(float pisua) {
 		this.pisua = pisua;
 	}
 
-	public int getPrezioa() {
+	public float getPrezioa() {
 		return this.prezioa;
 	}
 
-	public void setPrezioa(int prezioa) {
+	public void setPrezioa(float prezioa) {
 		this.prezioa = prezioa;
 	}
 
