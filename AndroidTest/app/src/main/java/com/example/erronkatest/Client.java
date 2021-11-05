@@ -9,8 +9,6 @@ public class Client {
         ID = iD;
         this.name = name;
         this.active = active;
-
-
     }
 
     public void setActive(Boolean active) {

@@ -53,6 +53,7 @@ public class SpinnerThread extends Thread {
         adapter = new ArrayAdapter<>(mainact1.getApplicationContext(), android.R.layout.simple_spinner_item, names);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         MainActivity.adapterPersona = adapter;
+        MainActivity.main_clients = clients;
 
     }
     public void insertName(Client client){

@@ -41,6 +41,7 @@ public class Requester extends AsyncTask< Void ,Void ,ListView > {
     protected ListView doInBackground(Void... voids) {
         try{
             getArrayList();
+            MainActivity.main_products = products;
             getNames();
             return lv;
         }catch (Exception e){
