@@ -23,7 +23,7 @@ public class ProduktuaDao {
     	return entityManager.createQuery("from Produktua").getResultList();
     }
     
-    public Produktuak getById(long id) {
+    public Produktuak getById(int id) {
         return entityManager.find(Produktuak.class, id);
     }
 

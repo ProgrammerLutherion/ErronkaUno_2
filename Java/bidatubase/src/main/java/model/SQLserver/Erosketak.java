@@ -20,7 +20,7 @@ public class Erosketak implements Serializable {
 
 	private String erreferentzia;
 
-	private int guztira;
+	private long guztira;
 
 	private int kopurua;
 
@@ -66,11 +66,11 @@ public class Erosketak implements Serializable {
 		this.erreferentzia = erreferentzia;
 	}
 
-	public int getGuztira() {
+	public long getGuztira() {
 		return this.guztira;
 	}
 
-	public void setGuztira(int guztira) {
+	public void setGuztira(long guztira) {
 		this.guztira = guztira;
 	}
 

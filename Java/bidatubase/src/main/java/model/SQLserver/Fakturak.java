@@ -16,13 +16,13 @@ public class Fakturak implements Serializable {
 	@Id
 	private int id;
 
-	private int bez;
+	private long bez;
 
 	private String data;
 
 	private String egoera;
 
-	private int guztira;
+	private long guztira;
 
 	private String izena;
 
@@ -42,11 +42,11 @@ public class Fakturak implements Serializable {
 		this.id = id;
 	}
 
-	public int getBez() {
+	public long getBez() {
 		return this.bez;
 	}
 
-	public void setBez(int bez) {
+	public void setBez(long bez) {
 		this.bez = bez;
 	}
 
@@ -66,11 +66,11 @@ public class Fakturak implements Serializable {
 		this.egoera = egoera;
 	}
 
-	public int getGuztira() {
+	public long getGuztira() {
 		return this.guztira;
 	}
 
-	public void setGuztira(int guztira) {
+	public void setGuztira(long guztira) {
 		this.guztira = guztira;
 	}
 

@@ -31,13 +31,13 @@ public class AccountMove implements Serializable {
 	private BigDecimal amountResidualSigned;
 
 	@Column(name="amount_tax")
-	private BigDecimal amountTax;
+	private long amountTax;
 
 	@Column(name="amount_tax_signed")
 	private BigDecimal amountTaxSigned;
 
 	@Column(name="amount_total")
-	private BigDecimal amountTotal;
+	private long amountTotal;
 
 	@Column(name="amount_total_signed")
 	private BigDecimal amountTotalSigned;
@@ -246,11 +246,11 @@ public class AccountMove implements Serializable {
 		this.amountResidualSigned = amountResidualSigned;
 	}
 
-	public BigDecimal getAmountTax() {
+	public long getAmountTax() {
 		return this.amountTax;
 	}
 
-	public void setAmountTax(BigDecimal amountTax) {
+	public void setAmountTax(long amountTax) {
 		this.amountTax = amountTax;
 	}
 
@@ -262,11 +262,11 @@ public class AccountMove implements Serializable {
 		this.amountTaxSigned = amountTaxSigned;
 	}
 
-	public BigDecimal getAmountTotal() {
+	public long getAmountTotal() {
 		return this.amountTotal;
 	}
 
-	public void setAmountTotal(BigDecimal amountTotal) {
+	public void setAmountTotal(long amountTotal) {
 		this.amountTotal = amountTotal;
 	}
 

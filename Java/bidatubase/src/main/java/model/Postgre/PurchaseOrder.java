@@ -27,7 +27,7 @@ public class PurchaseOrder implements Serializable {
 	private BigDecimal amountTax;
 
 	@Column(name="amount_total")
-	private BigDecimal amountTotal;
+	private long amountTotal;
 
 	@Column(name="amount_untaxed")
 	private BigDecimal amountUntaxed;
@@ -154,11 +154,11 @@ public class PurchaseOrder implements Serializable {
 		this.amountTax = amountTax;
 	}
 
-	public BigDecimal getAmountTotal() {
+	public long getAmountTotal() {
 		return this.amountTotal;
 	}
 
-	public void setAmountTotal(BigDecimal amountTotal) {
+	public void setAmountTotal(long amountTotal) {
 		this.amountTotal = amountTotal;
 	}
 

@@ -7,11 +7,11 @@ import javax.transaction.Transactional;
 import org.springframework.stereotype.Repository;
 
 import model.Postgre.*;
+import model.SQLserver.Bezeroak;
 
 @Repository
 @Transactional
 public class PurchaseOrderLineDao {
-
     // A través de la anotación @PersistenceContext, se inyectará automáticamente
     // un EntityManager producido desde el entityManagerFactory definido en la clase
     // DatabaseConfig.
@@ -24,6 +24,9 @@ public class PurchaseOrderLineDao {
     @SuppressWarnings("unchecked")
     public List<PurchaseOrderLine> getAll() {
     	return entityManager.createQuery("from PurchaseOrderLine").getResultList();
+    }
+    public Bezeroak getById(int id) {
+        return entityManager.find(Bezeroak.class, id);
     }
     
 }

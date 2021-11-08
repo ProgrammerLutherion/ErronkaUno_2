@@ -67,7 +67,7 @@ public class PurchaseOrderLine implements Serializable {
 	private Integer productId;
 
 	@Column(name="product_qty")
-	private BigDecimal productQty;
+	private int productQty;
 
 	@Column(name="product_uom")
 	private Integer productUom;
@@ -253,11 +253,11 @@ public class PurchaseOrderLine implements Serializable {
 		this.productId = productId;
 	}
 
-	public BigDecimal getProductQty() {
+	public int getProductQty() {
 		return this.productQty;
 	}
 
-	public void setProductQty(BigDecimal productQty) {
+	public void setProductQty(int productQty) {
 		this.productQty = productQty;
 	}
 

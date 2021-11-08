@@ -24,7 +24,7 @@ public class BezeroaDao {
     	return entityManager.createQuery("from Bezeroa").getResultList();
     }
     
-    public Bezeroak getById(long id) {
+    public Bezeroak getById(int id) {
         return entityManager.find(Bezeroak.class, id);
     }
 
