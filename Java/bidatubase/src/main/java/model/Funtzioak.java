@@ -1,8 +1,14 @@
-package exec;
+package model;
 
+import java.io.File;
 import java.text.Format;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -31,13 +37,15 @@ import entity.SQLserver.Erosketak;
 import entity.SQLserver.Fakturak;
 import entity.SQLserver.Produktuak;
 import entity.SQLserver.Salmentak;
+import xml.Options;
+import xml.User;
 
 public class Funtzioak {
 
-	static // Produktuak pasatzea
-	ApplicationContext appContext = new AnnotationConfigApplicationContext(SQLserverKonfigurazioa.class);
+	static ApplicationContext appContext = new AnnotationConfigApplicationContext(SQLserverKonfigurazioa.class);
 	static ApplicationContext appContext1 = new AnnotationConfigApplicationContext(PostgreKonfigurazioa.class);
 
+	// Produktuak pasatzea
 	public static boolean produktuakPasatu() {
 
 		try {
@@ -57,7 +65,7 @@ public class Funtzioak {
 				p.setPrezioa(i.getListPrice().floatValue());
 				produktuaSql.update(p);
 			}
-			
+
 			return true;
 		} catch (Exception E) {
 			return false;
@@ -81,7 +89,7 @@ public class Funtzioak {
 				p.setEmaila(i.getEmail());
 				bezeroSql.update(p);
 			}
-			
+
 			return true;
 		} catch (Exception E) {
 			return false;
@@ -112,7 +120,7 @@ public class Funtzioak {
 				salmentakSql.update(p);
 
 			}
-			
+
 			return true;
 		} catch (Exception E) {
 			return false;
@@ -158,7 +166,7 @@ public class Funtzioak {
 					}
 				}
 			}
-			
+
 			return true;
 		} catch (Exception E) {
 			return false;
@@ -192,44 +200,97 @@ public class Funtzioak {
 				p.setEgoera(i.getPaymentState());
 				fakturakSql.update(p);
 			}
-			
+
 			return true;
 		} catch (Exception E) {
 			return false;
 		}
 	}
-	
+
 	public static boolean denaPasatu() {
 		boolean ondo = true;
-		
-		if(!produktuakPasatu()) {
+
+		if (!produktuakPasatu()) {
 			ondo = false;
 			System.out.println("Produktuak ez dira pasatu");
 		}
-		
-		if(!bezeroakPasatu()) {
+
+		if (!bezeroakPasatu()) {
 			ondo = false;
 			System.out.println("Bezeroak ez dira pasatu");
 		}
 
-		
-		if(!salmentakPasatu()) {
+		if (!salmentakPasatu()) {
 			ondo = false;
 			System.out.println("Salmentak ez dira pasatu");
 		}
 
-		
-		if(!erosketakPasatu()) {
+		if (!erosketakPasatu()) {
 			ondo = false;
 			System.out.println("Erosketak ez dira pasatu");
 		}
 
-		
-		if(!fakturakPasatu()) {
+		if (!fakturakPasatu()) {
 			ondo = false;
 			System.out.println("Fakturak ez dira pasatu");
 		}
-		
+
 		return ondo;
 	}
+
+	public static boolean xmlAukeratuTaulak() {
+		
+		try {
+		    // create XML file
+		    File file = new File("options.xml");
+
+		    // create an instance of `JAXBContext`
+		    JAXBContext context = JAXBContext.newInstance(Options.class);
+
+		    // create an instance of `Marshaller`
+		    Marshaller marshaller = context.createMarshaller();
+
+		    // enable pretty-print XML output
+		    marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+
+		    // create user object
+		    String[] taulak = {"Bezeroak", "Salmentak","Erosketak"};
+		    
+		    
+		    Options optns = new Options(taulak);
+
+		    // convert user object to XML file
+		    marshaller.marshal(optns, file);
+
+		} catch (JAXBException ex) {
+		    ex.printStackTrace();
+		}
+		
+		return true;
+	}
+	
+	public static boolean xmlIrakurri() {
+		try {
+		    // XML file path
+		    File file = new File("proba.xml");
+
+		    // create an instance of `JAXBContext`
+		    JAXBContext context = JAXBContext.newInstance(User.class);
+
+		    // create an instance of `Unmarshaller`
+		    Unmarshaller unmarshaller = context.createUnmarshaller();
+
+		    // convert XML file to user object
+		    User user = (User) unmarshaller.unmarshal(file);
+
+		    // print user object
+		    System.out.println(user);
+
+		} catch (JAXBException ex) {
+		    ex.printStackTrace();
+		}
+		
+		return true;
+	}
+
 }
