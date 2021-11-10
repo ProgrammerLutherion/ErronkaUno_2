@@ -26,8 +26,6 @@ public class Requester extends AsyncTask< Void ,Void ,ListView > {
     String PASS = "openpgpwd";
     String QUERY = "SELECT product_template.id, product_template.name, product_template.description_sale, product_template.list_price, product_template.volume, product_template.weight, SUM(stock_move.product_qty) - (select sum(stock_move.product_qty) from public.stock_move where stock_move.location_dest_id = 5 and stock_move.product_id = product_template.id) as stock,(select imagenes.imagen_hash from public.imagenes where imagenes.id_item = product_template.id) as imagen , product_template.sale_ok,product_template.is_published, product_template.active FROM public.product_template inner join stock_move on stock_move.product_id = product_template.id inner join imagenes on imagenes.id_item = product_template.id where stock_move.location_dest_id = 8 group by product_template.id";
 
-
-
     Activity mainact;
     ArrayList<Product> result = new ArrayList<>();
     ArrayList<String> names = new ArrayList<>();
@@ -41,15 +39,13 @@ public class Requester extends AsyncTask< Void ,Void ,ListView > {
     protected ListView doInBackground(Void... voids) {
         try{
             getArrayList();
-            MainActivity.main_products = products;
+            PrincipalMenu.main_products = products;
             getNames();
             return lv;
         }catch (Exception e){
             return null;
         }
-
     }
-
 
     @Override
     protected void onPostExecute(ListView listview) {
@@ -75,7 +71,7 @@ public class Requester extends AsyncTask< Void ,Void ,ListView > {
                 }
             }
         });
-        MainActivity.adapter = adapter;
+        PrincipalMenu.adapter = adapter;
     }
 
 

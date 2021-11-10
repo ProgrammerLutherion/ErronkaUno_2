@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -37,7 +36,6 @@ public class SpinnerThread extends Thread {
                 Statement stmt = conn.createStatement();
                 ResultSet rs = stmt.executeQuery(QUERY);
                 while (rs.next()) {
-                    // Retrieve by column name
                     Client client = new Client(rs.getInt("id"), rs.getString("name"), rs.getBoolean("active"));
                     Log.i("TAG", "run: "+rs.getString("name"));
                     insertClient(client);
@@ -52,8 +50,8 @@ public class SpinnerThread extends Thread {
         }
         adapter = new ArrayAdapter<>(mainact1.getApplicationContext(), android.R.layout.simple_spinner_item, names);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        MainActivity.adapterPersona = adapter;
-        MainActivity.main_clients = clients;
+        PrincipalMenu.adapterPersona = adapter;
+        PrincipalMenu.main_clients = clients;
 
     }
     public void insertName(Client client){
