@@ -68,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
                 }
 
         } catch (SQLException | ClassNotFoundException e) {
-            lst_product.setOnItemLongClickListener((AdapterView.OnItemLongClickListener) this);
             datuakErakutsi();
         }
     }
@@ -78,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         List<String> zerrenda = new ArrayList<String>();
         Cursor cursor = db.rawQuery("SELECT iD , name, list_price, description, volume, weight, stock, imagen, sale_ok, active, is_published FROM BaseDatuLokala", null);
         if(cursor.getCount()==0) {
-            zerrenda.add("Ez dago edukirik datu basean");
+            Log.i("", "Ez dago edukirik datu basean");
         }
         else{
             while(cursor.moveToNext()) {
@@ -93,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
     public void dataSartu(Product product){
 
         db = openOrCreateDatabase("Products Local Database", Context.MODE_PRIVATE, null);
-        db.execSQL("CREATE TABLE IF NOT EXISTS LocalDatabase(iD INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, name TEXT, list_price TEXT, description TEXT, " +
+        db.execSQL("CREATE TABLE IF NOT EXISTS BaseDatuLokala(iD INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, name TEXT, list_price TEXT, description TEXT, " +
                 "volume TEXT, weight TEXT, stock TEXT, imagen TEXT, sale_ok bit, active bit, is_published bit);");
         String insert_query = "INSERT INTO BaseDatuLokala( name, list_price, description, volume, weight, stock, imagen, sale_ok, active, is_published) " +
                 "VALUES ('" + nameTxt + "','" + listPText + "','" + descTxt + "','" + volTxt + "','" + weightTxt + "','" + stockTxt + "','" + imagenTxt + "','" + saleB + "','" + activeBit + "','" + is_publi + "')";
