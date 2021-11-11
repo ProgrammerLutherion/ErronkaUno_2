@@ -5,7 +5,7 @@
     android:id="@+id/fondo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".PrinciplaMenu">
 
     <RelativeLayout
         android:id="@+id/google_pixe"
