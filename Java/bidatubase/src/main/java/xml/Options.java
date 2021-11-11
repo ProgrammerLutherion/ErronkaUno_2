@@ -2,8 +2,6 @@ package xml;
 
 import java.util.Arrays;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
@@ -22,12 +20,12 @@ public class Options {
 	public String[] getTaula() {
 		return taula;
 	}
-
-	@XmlElementWrapper(name = "option")
-	@XmlElement
-	public void setTaula(String[] taula) {
-		this.taula = taula;
-	}
+//
+//
+//	@XmlAttribute
+//	public void setTaula(String[] taula) {
+//		this.taulak = taula;
+//	}
 
 	@Override
 	public String toString() {

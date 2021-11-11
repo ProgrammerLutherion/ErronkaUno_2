@@ -1,27 +1,33 @@
 package xml;
 
-import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
+import java.time.LocalDateTime;    
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement
+@XmlRootElement(name ="log")
 public class Log {
 	private int id;
-	private LocalDate data;
+	private String data;
 	private String[] datuak;
 
 	public Log() {
 
 	}
 
-	public Log(int id, LocalDate data, String[] datuak) {
+	public Log(String[] datuak) {
 		super();
-		this.id = id;
-		this.data = data;
+		this.id = 0;
+		
+		 LocalDateTime now = LocalDateTime.now();  
+		 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
+		 dtf.format(now);  
+		
+		this.data = dtf.format(now);
 		this.datuak = datuak;
 	}
 
@@ -34,12 +40,12 @@ public class Log {
 		this.id = id;
 	}
 
-	public LocalDate getData() {
+	public String getData() {
 		return data;
 	}
 
 	@XmlAttribute
-	public void setData(LocalDate data) {
+	public void setData(String data) {
 		this.data = data;
 	}
 
@@ -49,7 +55,7 @@ public class Log {
 	}
 	
 	@XmlElementWrapper(name = "datuak")
-	@XmlElement
+	@XmlElement(name = "datuak")
 	public void setDatuak(String[] datuak) {
 		this.datuak = datuak;
 	}

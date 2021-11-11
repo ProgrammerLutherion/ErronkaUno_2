@@ -1,5 +1,7 @@
 package main;
 
+import javax.xml.bind.JAXBException;
+
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import model.Funtzioak;
@@ -7,7 +9,7 @@ import model.Funtzioak;
 @SpringBootApplication
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws JAXBException {
 
 		if (Funtzioak.denaPasatu()) {
 			System.out.println("Taula denak ondo pasatu dira.");
@@ -15,9 +17,13 @@ public class Main {
 			System.out.println("Arazoren bat egon da datuak pasatzean.");
 		}
 
-		Funtzioak.xmlAukeratuTaulak();
 		
-		//Funtzioak.xmlIrakurri();
+		if(Funtzioak.xmlAukeratuTaulak()) {
+			System.out.println("Taulak ondo aukeratu dira");
+		}else {
+			System.out.println("Taulak aukeratzean arazoren bat gertatu da");
+		}
+		
 		
 	}
 }
