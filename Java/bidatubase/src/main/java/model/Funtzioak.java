@@ -254,7 +254,7 @@ public class Funtzioak {
 			String auk = sc.nextLine();
 			
 			if(auk.equals("b")) {
-				
+				xmlLogGehitu(new Log(azkTaulak.getTaula()));
 			    return true;
 			}else {
 				taulak = taulaMenua();
@@ -299,6 +299,8 @@ public class Funtzioak {
 		
 		while(!amaituta) {
 			
+			
+			
 			System.out.println("Zein taula nahi dituzu erabiltzea?");
 			if(!bez) {
 				System.out.println("1- Bezeroak");
@@ -314,9 +316,7 @@ public class Funtzioak {
 			
 			System.out.println("0- Amaitu");
 			
-			if(bez && pro && ero && sal && fak) {
-				amaituta = true;
-			}
+			
 			
 			int auk = -1;
 			auk = sc.nextInt();
@@ -342,6 +342,10 @@ public class Funtzioak {
 				break;
 			default:
 				break;
+			}
+			
+			if(bez && pro && ero && sal && fak) {
+				amaituta = true;
 			}
 		}
 		

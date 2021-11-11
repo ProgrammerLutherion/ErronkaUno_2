@@ -24,6 +24,6 @@ public class Main {
 			System.out.println("Taulak aukeratzean arazoren bat gertatu da");
 		}
 		
-		
+		System.exit(0);
 	}
 }

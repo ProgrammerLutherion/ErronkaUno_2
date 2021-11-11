@@ -7,4 +7,26 @@
             <datuak>Fakturak</datuak>
         </datuak>
     </logs>
+    <logs data="11-11-2021 11:00" id="1">
+        <datuak/>
+    </logs>
+    <logs data="11-11-2021 11:00" id="2"/>
+    <logs data="11-11-2021 11:00" id="3">
+        <datuak>
+            <datuak>Bezeroak</datuak>
+            <datuak>Produktuak</datuak>
+            <datuak>Erosketak</datuak>
+            <datuak>Salmentak</datuak>
+            <datuak>Fakturak</datuak>
+        </datuak>
+    </logs>
+    <logs data="11-11-2021 11:33" id="4">
+        <datuak>
+            <datuak>Bezeroak</datuak>
+            <datuak>Produktuak</datuak>
+            <datuak>Erosketak</datuak>
+            <datuak>Salmentak</datuak>
+            <datuak>Fakturak</datuak>
+        </datuak>
+    </logs>
 </logs>
