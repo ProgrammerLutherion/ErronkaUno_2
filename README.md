@@ -16,4 +16,6 @@ Hiru zatitan banatuta dago:
 <li>C-ko aplikazioa</li>
 <li>Java programa</li>
 </ul>
+
+<h2>Klase diagrama</h2>
 <img src="https://user-images.githubusercontent.com/55279037/142628355-f6a40b85-3fcd-479d-accf-d701dcf68b80.png"/>
