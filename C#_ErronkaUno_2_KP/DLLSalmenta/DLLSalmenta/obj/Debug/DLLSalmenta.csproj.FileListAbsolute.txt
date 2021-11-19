@@ -1,0 +1,17 @@
+C:\Users\Administrador\Desktop\pruebas dll\SalmentaDLL\DLL\DLLSalmenta\DLLSalmenta\bin\Debug\DLLSalmenta.dll.config
+C:\Users\Administrador\Desktop\pruebas dll\SalmentaDLL\DLL\DLLSalmenta\DLLSalmenta\bin\Debug\DLLSalmenta.dll
+C:\Users\Administrador\Desktop\pruebas dll\SalmentaDLL\DLL\DLLSalmenta\DLLSalmenta\bin\Debug\DLLSalmenta.pdb
+C:\Users\Administrador\Desktop\pruebas dll\SalmentaDLL\DLL\DLLSalmenta\DLLSalmenta\obj\Debug\DLLSalmenta.UserControl1.resources
+C:\Users\Administrador\Desktop\pruebas dll\SalmentaDLL\DLL\DLLSalmenta\DLLSalmenta\obj\Debug\DLLSalmenta.csproj.GenerateResource.cache
+C:\Users\Administrador\Desktop\pruebas dll\SalmentaDLL\DLL\DLLSalmenta\DLLSalmenta\obj\Debug\DLLSalmenta.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Desktop\pruebas dll\SalmentaDLL\DLL\DLLSalmenta\DLLSalmenta\obj\Debug\DLLSalmenta.dll
+C:\Users\Administrador\Desktop\pruebas dll\SalmentaDLL\DLL\DLLSalmenta\DLLSalmenta\obj\Debug\DLLSalmenta.pdb
+C:\Users\romero.iker\Desktop\pruebas dll\SalmentaDLL\DLL\DLLSalmenta\DLLSalmenta\bin\Debug\DLLSalmenta.dll.config
+C:\Users\romero.iker\Desktop\pruebas dll\SalmentaDLL\DLL\DLLSalmenta\DLLSalmenta\bin\Debug\DLLSalmenta.dll
+C:\Users\romero.iker\Desktop\pruebas dll\SalmentaDLL\DLL\DLLSalmenta\DLLSalmenta\bin\Debug\DLLSalmenta.pdb
+C:\Users\romero.iker\Desktop\pruebas dll\SalmentaDLL\DLL\DLLSalmenta\DLLSalmenta\obj\Debug\DLLSalmenta.csprojAssemblyReference.cache
+C:\Users\romero.iker\Desktop\pruebas dll\SalmentaDLL\DLL\DLLSalmenta\DLLSalmenta\obj\Debug\DLLSalmenta.UserControl1.resources
+C:\Users\romero.iker\Desktop\pruebas dll\SalmentaDLL\DLL\DLLSalmenta\DLLSalmenta\obj\Debug\DLLSalmenta.csproj.GenerateResource.cache
+C:\Users\romero.iker\Desktop\pruebas dll\SalmentaDLL\DLL\DLLSalmenta\DLLSalmenta\obj\Debug\DLLSalmenta.csproj.CoreCompileInputs.cache
+C:\Users\romero.iker\Desktop\pruebas dll\SalmentaDLL\DLL\DLLSalmenta\DLLSalmenta\obj\Debug\DLLSalmenta.dll
+C:\Users\romero.iker\Desktop\pruebas dll\SalmentaDLL\DLL\DLLSalmenta\DLLSalmenta\obj\Debug\DLLSalmenta.pdb
