@@ -16,6 +16,3 @@ Hiru zatitan banatuta dago:
 <li>C-ko aplikazioa</li>
 <li>Java programa</li>
 </ul>
-
-<h4>javako klase diagrama:</h4>
-![alt text](https://github.com/ProgrammerLutherion/ErronkaUno_2/blob/master/JavaErronkaUnoDos.umlcd.png)
