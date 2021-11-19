@@ -10,6 +10,7 @@ datu hoiek xml fitxategi baten gordeko ditu.<br>
 Androideko aplikazioan hariak, semaforoak etafakturak sortzeko aukera gehitu dugu.
 </p>
 
+
 Hiru zatitan banatuta dago:
 <ul>
 <li>Android aplikazioa</li>
@@ -19,3 +20,5 @@ Hiru zatitan banatuta dago:
 
 <h2>Klase diagrama</h2>
 <img src="https://user-images.githubusercontent.com/55279037/142628355-f6a40b85-3fcd-479d-accf-d701dcf68b80.png"/>
+<h2>C#</h2>
+<p>C# karpetak exekutablearen instaladorea eta ddl poriektua dauka barruan</p>
