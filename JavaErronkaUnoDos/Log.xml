@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<logs>
+    <logs data="17-11-2021 11:43" id="0">
+        <datuak>
+            <datuak>Bezeroak</datuak>
+            <datuak>Produktuak</datuak>
+            <datuak>Erosketak</datuak>
+            <datuak>Salmentak</datuak>
+            <datuak>Fakturak</datuak>
+        </datuak>
+    </logs>
+    <logs data="17-11-2021 11:44" id="1">
+        <datuak>
+            <datuak>Bezeroak</datuak>
+            <datuak>Produktuak</datuak>
+            <datuak>Erosketak</datuak>
+            <datuak>Salmentak</datuak>
+            <datuak>Fakturak</datuak>
+        </datuak>
+    </logs>
+    <logs data="17-11-2021 11:55" id="2">
+        <datuak>
+            <datuak>Bezeroak</datuak>
+            <datuak>Produktuak</datuak>
+            <datuak>Erosketak</datuak>
+            <datuak>Salmentak</datuak>
+            <datuak>Fakturak</datuak>
+        </datuak>
+    </logs>
+    <logs data="18-11-2021 11:54" id="3">
+        <datuak>
+            <datuak>Bezeroak</datuak>
+            <datuak>Produktuak</datuak>
+            <datuak>Erosketak</datuak>
+            <datuak>Salmentak</datuak>
+            <datuak>Fakturak</datuak>
+        </datuak>
+    </logs>
+    <logs data="19-11-2021 09:24" id="4">
+        <datuak>
+            <datuak>Bezeroak</datuak>
+            <datuak>Produktuak</datuak>
+            <datuak>Salmentak</datuak>
+        </datuak>
+    </logs>
+    <logs data="19-11-2021 09:27" id="5">
+        <datuak>
+            <datuak>Bezeroak</datuak>
+            <datuak>Produktuak</datuak>
+            <datuak>Salmentak</datuak>
+        </datuak>
+    </logs>
+</logs>
