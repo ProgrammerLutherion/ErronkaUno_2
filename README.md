@@ -18,4 +18,4 @@ Hiru zatitan banatuta dago:
 </ul>
 
 <h4>javako klase diagrama:</h4>
-![Alt text](relative/path/to/img.jpg?raw=true "JavaErronkaUnoDos.umlcd.png")
+![alt text](https://github.com/ProgrammerLutherion/ErronkaUno_2/blob/master/JavaErronkaUnoDos.umlcd.png)
