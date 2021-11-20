@@ -7,7 +7,7 @@ izango ditugu hor. Honek bere SQL server datu base propioa izango du eta datu ba
 hori atzitzeko javan egindako ORM aplikazio bat erabiliko dugu. Java aplikazioan<br>
 odoo-ko postgreSql-tik SqlServer-rera ze taula pasatu nahi dituzun galdetuko dizu eta<br>
 datu hoiek xml fitxategi baten gordeko ditu.<br>
-Androideko aplikazioan hariak, semaforoak etafakturak sortzeko aukera gehitu dugu.
+Androideko aplikazioan hariak, semaforoak eta fakturak sortzeko aukera ere gehitu dugu.
 </p>
 
 
